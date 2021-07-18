@@ -1,0 +1,33 @@
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+ol,
+ul {
+  padding-left: 0 !important;
+}
+
+* {
+  font-family: "Saira", "Noto Sans JP", sans-serif;
+  /* overflow: visible !important; */
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 0;
+}
+
+.v-stepper {
+  overflow: visible !important;
+}
+
+.v-stepper__wrapper {
+  overflow: visible !important;
+}
+
+.v-stepper__items {
+  overflow: visible !important;
+}

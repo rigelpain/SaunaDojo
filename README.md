@@ -1,4 +1,102 @@
-# saunadojo
+# 調査
+
+## 何のため？
+- インターンシップ応募用
+  - デザイナー採用
+    - プロダクトデザイナー
+    - webデザイナー
+  - エンジニア採用
+    - フロントエンドエンジニア
+
+<br>
+
+## 誰のため？
+- 採用担当人事
+>   時間があまりないらしい
+
+- デザイナー採用
+    - プロダクトデザイナー
+        - プロダクトの新規性・ビジネスを視野に入れた展望を推す
+- webデザイナー
+    - エンジニア採用
+        - フロントエンドエンジニア
+        - 技術の慣れ・製作物を推す
+        - 勉強への姿勢を推す
+        - モダンな技術に触れる
+
+<br>
+
+## 何を伝えたい？
+- 自分が今までやってきたこと
+  - 面白いアイデア
+    - 形にする技術
+    - 他者に伝える技術
+  - 情熱
+    - 製作に対するアクティブな気持ち
+  - web開発
+    - 個人・企業での開発経験
+
+- これからなりたい人物像
+  - プロダクトデザイナー
+    - プロダクトによるエンタテイメント性のあるモノとビジネスモデルのマッチができる
+    - 新規性があり、多くの人の生活が豊かになるプロダクトの提案ができる
+  - webデザイナー
+    - web開発とデザインの知識を高いレベルで持ち合わせて、作りやすくデザイン性のある提案ができる
+  - フロントエンドエンジニア
+    - 可読性の高いコード、モダンな技術での開発ができる
+
+<br>
+<br>
+
+# こうはなりたくない
+
+- 口先だけ
+- 分かりづらい
+- 退屈
+- 器用貧乏
+- 誇張表現
+
+<br>
+<br>
+
+# 空気感を作る
+
+## 要素
+- カラー 配色
+
+- モチーフ 素材
+
+- フォント
+
+- テクスチャ 質感
+
+- バランス 構図
+
+<br>
+<br>
+
+## テクニック
+- 押す つかむ デザイン PUSH型 
+- 引く 引き寄せる デザイン PULL型
+
+<br>
+<br>
+
+# ポイント
+自分のことを知らない人に見せる 
+誤解されないように正しく伝える
+<br>
+
+「目に見える順番」と「情報の優劣」を一致させる
+  1. アイキャッチ （イメージ、印象）
+  2. コピー（概要、概念）
+  3. 詳細情報
+<br>
+
+全体に一貫性を持たせる
+
+
+# learn01
 
 ## Build Setup
 
@@ -17,53 +115,5 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+# saunadojo
