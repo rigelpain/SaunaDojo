@@ -8,78 +8,106 @@
         <v-row>
           <v-col
             cols="12"
-            sm="6"
-            md="4"
-          >
-            <v-text-field
-              label="Legal first name*"
-              required
-            ></v-text-field>
-          </v-col>
-          <v-col
-            cols="12"
-            sm="6"
-            md="4"
-          >
-            <v-text-field
-              label="Legal middle name"
-              hint="example of helper text only on focus"
-            ></v-text-field>
-          </v-col>
-          <v-col
-            cols="12"
-            sm="6"
-            md="4"
-          >
-            <v-text-field
-              label="Legal last name*"
-              hint="example of persistent helper text"
-              persistent-hint
-              required
-            ></v-text-field>
-          </v-col>
-          <v-col cols="12">
-            <v-text-field
-              label="Email*"
-              required
-            ></v-text-field>
-          </v-col>
-          <v-col cols="12">
-            <v-text-field
-              label="Password*"
-              type="password"
-              required
-            ></v-text-field>
-          </v-col>
-          <v-col
-            cols="12"
           >
             <Term />
           </v-col>
+
           <v-col
+            v-if="step>=2"
             cols="12"
-            sm="6"
           >
-            <v-select
-              :items="['0-17', '18-29', '30-54', '54+']"
-              label="Age*"
-              required
-            ></v-select>
+            <Term2 />
           </v-col>
+
           <v-col
+            v-if="step>=3"
             cols="12"
-            sm="6"
           >
-            <v-autocomplete
-              :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
-              label="Interests"
-              multiple
-            ></v-autocomplete>
+            <Term3 />
+          </v-col>
+
+          <v-col class="d-flex justify-center">
+            <v-btn
+              class="mx-auto"
+              fab
+              dark
+              color="indigo"
+              @click="setIncrement"
+            >
+              <v-icon dark>
+                mdi-plus
+              </v-icon>
+            </v-btn>
           </v-col>
         </v-row>
       </v-container>
-      <small>*indicates required field</small>
     </v-card-text>
+    <v-toolbar
+      flat
+      color="transparent"
+    >
+      <v-toolbar-title>施設情報</v-toolbar-title>
+    </v-toolbar>
+
+    <v-container class="py-0">
+      <v-row
+        align="center"
+        justify="start"
+      >
+        <v-col
+          v-for="(selection, i) in selections"
+          :key="selection.text"
+          class="shrink"
+        >
+          <v-chip
+            :disabled="loading"
+            close
+            @click:close="selected.splice(i, 1)"
+          >
+            <v-icon
+              left
+              v-text="selection.icon"
+            ></v-icon>
+            {{ selection.text }}
+          </v-chip>
+        </v-col>
+
+        <v-col
+          v-if="!allSelected"
+          cols="12"
+        >
+          <v-text-field
+            ref="search"
+            v-model="search"
+            full-width
+            hide-details
+            label="Search"
+            single-line
+          ></v-text-field>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-divider v-if="!allSelected"></v-divider>
+
+    <v-list>
+      <template v-for="item in categories">
+        <v-list-item
+          v-if="!selected.includes(item)"
+          :key="item.text"
+          :disabled="loading"
+          @click="selected.push(item)"
+        >
+          <v-list-item-avatar>
+            <v-icon
+              :disabled="loading"
+              v-text="item.icon"
+            ></v-icon>
+          </v-list-item-avatar>
+          <v-list-item-title v-text="item.text"></v-list-item-title>
+        </v-list-item>
+      </template>
+    </v-list>
   </div>
 </template>
 
@@ -94,6 +122,7 @@ export default {
       interval: null,
       isPlaying: false,
       dialog: false,
+      step: 1,
     }
   },
   computed: {
@@ -118,6 +147,9 @@ export default {
     },
     toggle () {
       this.isPlaying = !this.isPlaying
+    },
+    setIncrement() {
+      this.step++
     },
   },
   components: {

@@ -2,7 +2,7 @@
   <div>
     <v-card class="mt-5 pa-5">
       <v-card-title>
-        1セット目
+        2セット目
       </v-card-title>
         <v-toolbar
           flat

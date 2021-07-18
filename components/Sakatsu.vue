@@ -18,7 +18,7 @@
         新しくサ活を記録する
       </v-btn>
     </template>
-      <v-card class="pa-10">
+      <v-card>
         <Writing />
         <v-card-actions>
           <v-spacer></v-spacer>

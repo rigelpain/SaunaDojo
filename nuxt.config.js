@@ -1,9 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
-
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -12,13 +9,12 @@ export default {
     titleTemplate: '%s - saunadojo',
     title: 'saunadojo',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -51,6 +47,9 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: false,
+      options: {
+        customProperties: true
+      },
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -67,12 +66,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    publicPath: '/docs/',
-    extend(config, ctx) {
-    },
+  },
+
+  router: {
   },
 
   generate: {
-    dir: 'docs'
+    dir: 'dist'
   },
+
+  mode: 'spa',
 }
