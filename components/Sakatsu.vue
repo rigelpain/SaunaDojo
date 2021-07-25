@@ -6,7 +6,7 @@
       max-width="600px"
     >
     <template v-slot:activator="{ on, attrs }">
-      <v-btn
+      <!-- <v-btn
         depressed
         block
         class="d-flex justify-center mb-6"
@@ -16,6 +16,18 @@
         v-on="on"
       >
         新しくサ活を記録する
+      </v-btn> -->
+      <v-btn
+        class="ma-2 px-5"
+        rounded
+        large
+        dark
+        color="indigo"
+        v-bind="attrs"
+        v-on="on"
+      >
+        <v-icon small class="mr-2">far fa-edit</v-icon>
+        サ活記録
       </v-btn>
     </template>
       <v-card>

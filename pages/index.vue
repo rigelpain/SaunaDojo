@@ -8,27 +8,6 @@
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
       <v-toolbar-title>サウナ道場</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
-
-      <template v-slot:extension>
-        <v-tabs
-          v-model="tab"
-          align-with-title
-        >
-          <v-tabs-slider color="yellow"></v-tabs-slider>
-          <v-tab>
-            サ活記録
-          </v-tab>
-          <v-tab>
-            シショー
-          </v-tab>
-        </v-tabs>
-      </template>
     </v-toolbar>
 
     <v-tabs-items v-model="tab">
@@ -39,7 +18,26 @@
         <Shisho />
       </v-tab-item>
     </v-tabs-items>
+    <v-tabs
+      v-model="tab"
+      
+      icons-and-text
+    >
+      <v-tabs-slider color="yellow"></v-tabs-slider>
+      <v-tab>
+        サ活記録
+        <v-icon>fas fa-clipboard-list</v-icon>
+      </v-tab>
+      <v-tab>
+        シショー
+        <v-icon>mdi-heart</v-icon>
+      </v-tab>
+    </v-tabs>
   </v-card>
+
+
+
+  
 </template>
 
 <script>
