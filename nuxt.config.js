@@ -8,8 +8,8 @@ export default {
   ssr: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: "%s - Haruaki's Portfolio",
-    title: "Haruaki's Portfolio",
+    titleTemplate: "%s - サウナ道場",
+    title: "サウナ道場",
     htmlAttrs: {
       lang: 'en'
     },
