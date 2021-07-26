@@ -10,29 +10,9 @@
       <v-spacer></v-spacer>
     </v-toolbar>
 
-    <v-tabs-items v-model="tab">
-      <v-tab-item>
-        <Sakatsu />
-      </v-tab-item>
-      <v-tab-item>
-        <Shisho />
-      </v-tab-item>
-    </v-tabs-items>
-    <v-tabs
-      v-model="tab"
-      
-      icons-and-text
-    >
-      <v-tabs-slider color="yellow"></v-tabs-slider>
-      <v-tab>
-        サ活記録
-        <v-icon>fas fa-clipboard-list</v-icon>
-      </v-tab>
-      <v-tab>
-        シショー
-        <v-icon>mdi-heart</v-icon>
-      </v-tab>
-    </v-tabs>
+    
+    
+    
   </v-card>
 
 
@@ -48,10 +28,6 @@
     data () {
       return {
         tab: null,
-        tabItems: [
-          'サ活記録', 'シショー',
-        ],
-        text: 'Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       }
     },
     components: {
@@ -60,3 +36,6 @@
     },
   }
 </script>
+
+<style module>
+</style>
