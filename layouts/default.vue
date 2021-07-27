@@ -1,16 +1,9 @@
 <template>
-  <v-app>
-    <v-header>
-      <v-toolbar
-      color="orange darken-1"
-      dark
-      flat
-    >
+  <v-app dark>
+    <v-app-bar collapse-on-scroll app>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      <v-toolbar-title>サウナ道場</v-toolbar-title>
-      <v-spacer></v-spacer>
-    </v-toolbar>
-    </v-header>
+      <v-app-bar-title>サウナ道場</v-app-bar-title>
+    </v-app-bar>
     <v-main>
       <Nuxt />
       <v-tabs-items v-model="tab">
@@ -23,24 +16,24 @@
     </v-tabs-items>
     </v-main>
     <v-footer
-      :absolute="!fixed"
+      fixed
       app
     >
       <v-tabs
-      v-model="tab"
-      fixed-tabs
-      icons-and-text
-    >
-      <v-tabs-slider></v-tabs-slider>
-      <v-tab>
-        サ活記録
-        <v-icon>fas fa-clipboard-list</v-icon>
-      </v-tab>
-      <v-tab>
-        シショー
-        <v-icon>mdi-heart</v-icon>
-      </v-tab>
-    </v-tabs>
+        v-model="tab"
+        fixed-tabs
+        icons-and-text
+      >
+        <v-tabs-slider></v-tabs-slider>
+        <v-tab>
+          サ活記録
+          <v-icon>fas fa-clipboard-list</v-icon>
+        </v-tab>
+        <v-tab>
+          シショー
+          <v-icon>mdi-heart</v-icon>
+        </v-tab>
+      </v-tabs>
     </v-footer>
   </v-app>
 </template>
@@ -73,3 +66,6 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+</style>
