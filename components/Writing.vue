@@ -1,10 +1,6 @@
 <template>
   <div>
-    <v-card-title>
-      <span class="text-h5">新しいサ活記録</span>
-    </v-card-title>
-    <v-card-text>
-      <v-container>
+      <v-container class="px-8">
         <v-row>
           <v-col
             cols="12"
@@ -41,7 +37,6 @@
           </v-col>
         </v-row>
       </v-container>
-    </v-card-text>
     <v-toolbar
       flat
       color="transparent"

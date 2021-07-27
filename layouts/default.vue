@@ -1,11 +1,20 @@
 <template>
   <v-app>
+    <v-header>
+      <v-toolbar
+      color="orange darken-1"
+      dark
+      flat
+    >
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-toolbar-title>サウナ道場</v-toolbar-title>
+      <v-spacer></v-spacer>
+    </v-toolbar>
+    </v-header>
     <v-main>
       <Nuxt />
       <v-tabs-items v-model="tab">
       <v-tab-item>
-        <Sakatsu />
-        <Sakatsu />
         <Sakatsu />
       </v-tab-item>
       <v-tab-item>
