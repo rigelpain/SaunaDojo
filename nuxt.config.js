@@ -115,6 +115,6 @@ export default {
   },
 
   generate: {
-    dir: 'dist'
+    dir: 'docs'
   },
 }
