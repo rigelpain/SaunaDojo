@@ -3,7 +3,7 @@
     class="mx-auto"
   >
     <v-img v-bind:src="sauna_01" max-height="450px">
-      <div class="card-inner">
+      <div class="card-inner px-2">
         <v-row align="center" class="ma-1">
           <v-col flex>
             <v-avatar
@@ -18,15 +18,6 @@
             <span class="ml-5 text-caption info--text">67.8kg</span>
             <span class="ml-5 text-caption info--text">173cm</span>
           </v-col>
-          <!-- <v-col cols="2">
-            <v-btn-toggle rounded>
-              <v-btn>
-                <v-icon>
-                  mdi-heart
-                </v-icon>
-              </v-btn>
-            </v-btn-toggle>
-          </v-col> -->
           <v-col cols="2" class="text-subtitle-2 font-weight-light text--secondary">
             8h
           </v-col>
@@ -41,19 +32,37 @@
                 総合スコア（ 3セット ）
               </span>
             </v-col>
+            <v-col>
+              <v-btn
+                v-if="follow === false"
+                color="saunaWrite"
+                class="float-right"
+                @click="follow = !follow"
+              >
+                弟子入り
+              </v-btn>
+              <v-btn
+                v-if="follow === true"
+                color="primary"
+                class="float-right"
+                @click="follow = !follow"
+                outlined
+              >
+                師匠
+              </v-btn>
+            </v-col>
           </v-row>
           <v-row>
             <v-col>
               <span class="text-h4 font-weight-light">
-                40
+                72
               </span>
               <span class="subheading font-weight-light mr-1">pt</span>
               <v-fade-transition>
                 <v-avatar
-                  v-show="isPlaying"
-                  :color="color"
+                  color="orange"
                   :style="{
-                    animationDuration: '0.42s'
+                    animationDuration: '0.38s'
                   }"
                   class="mb-1 v-avatar--metronome"
                   size="12"
@@ -71,12 +80,11 @@
           <v-row>
             <v-col cols="4">
               <span class="text-h4 font-weight-light">
-                80
+                82
               </span>
               <span class="subheading font-weight-light mr-1">pt</span>
               <v-fade-transition>
                 <v-avatar
-                  v-show="isPlaying"
                   color="red"
                   :style="{
                     animationDuration: '0.27s'
@@ -185,23 +193,11 @@ export default {
         bpm: 40,
         interval: null,
         isPlaying: true,
+        follow: false,
         sauna_01: require("~/static/images/sauna/sauna_01.jpg"),
       }
     },
   computed: {
-    color () {
-      if (this.bpm < 20) return 'indigo'
-      if (this.bpm < 40) return 'teal'
-      if (this.bpm < 60) return 'green'
-      if (this.bpm < 80) return 'orange'
-      return 'red'
-    },
-    heartBeat () {
-      return `${ 30 / (this.bpm+30) }s`
-    },
-    heartBeat_01_02 () {
-      return `${ 30 / 110 }s`
-    },
   }
 }
 

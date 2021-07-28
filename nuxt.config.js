@@ -61,6 +61,7 @@ export default {
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
           sauna: colors.deepOrange.accent3,
+          saunaWrite: colors.deepOrange.darken3,
           water: colors.lightBlue.darken4,
           chair: colors.green.accent2
         },
@@ -80,7 +81,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['Noto+Sans+JP:wght@100;400;700', 'Saira:wght@100;400;700']
+      families: ['Noto+Sans+JP:wght@100;400;700', 'Saira:wght@100;400;700', 'New+Tegomin']
     }
   },
 

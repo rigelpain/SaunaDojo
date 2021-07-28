@@ -4,21 +4,23 @@
       v-model="dialog"
       persistent
       max-width="600px"
+      style="z-index: 100;"
     >
-    <template v-slot:activator="{ on, attrs }">
-      <v-btn
-        class="ma-2 px-5"
-        rounded
-        large
-        dark
-        color="indigo"
-        v-bind="attrs"
-        v-on="on"
-      >
-        <v-icon small class="mr-2">far fa-edit</v-icon>
-        サ活記録
-      </v-btn>
-    </template>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          class="ma-2 px-5 v-btn--fixed v-size--large"
+          rounded
+          large
+          dark
+          color="saunaWrite"
+          v-bind="attrs"
+          v-on="on"
+          style="z-index: 100; bottom: 100px; right: 30px;"
+        >
+          <v-icon small class="mr-2">far fa-edit</v-icon>
+          サ活記録
+        </v-btn>
+      </template>
       <v-card>
         <v-toolbar
           color="primary"
@@ -46,16 +48,21 @@
       </v-card>
     </v-dialog>
 
-
-    <v-row no-gutters>
+    <v-row>
       <v-col cols="12">
-        <p class="text-h4">最新のサ活</p>
+        <p class="text-h6">最新のサ活</p>
         <Card1 />
       </v-col>
     </v-row>
-    <v-card>
-      <v-card-title>過去のベストサ活</v-card-title>
-    </v-card>
+
+    <v-divider class="mt-10"></v-divider>
+
+    <v-row class="mt-10">
+      <v-col>
+        <p class="text-h6">過去のベストサ活</p>
+        <Card2 />
+      </v-col>
+    </v-row>
 
   </div>
 </template>
@@ -63,52 +70,25 @@
 <script>
 import Writing from '~/components/Writing.vue'
 import Card1 from '~/components/Card1.vue'
+import Card2 from '~/components/Card2.vue'
 
 export default {
   data () {
       return {
-        writing: false,
-        dialog: false,
-        bpm: 40,
-        interval: null,
-        isPlaying: true,
-
       }
     },
   computed: {
-    color () {
-      if (this.bpm < 20) return 'indigo'
-      if (this.bpm < 40) return 'teal'
-      if (this.bpm < 60) return 'green'
-      if (this.bpm < 80) return 'orange'
-      return 'red'
-    },
-    heartBeat () {
-      return `${ 30 / (this.bpm+30) }s`
-    },
-    heartBeat_01_02 () {
-      return `${ 30 / 110 }s`
-    },
   },
   components: {
     Writing,
     Card1,
+    Card2,
   }
 }
 
 </script>
 
 <style>
-
-@keyframes heartBeatAnimation {
-  from {
-    transform: scale(.5);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
 
 </style>
 

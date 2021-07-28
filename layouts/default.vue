@@ -2,7 +2,11 @@
   <v-app dark>
     <v-app-bar collapse-on-scroll app>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      <v-app-bar-title>サウナ道場</v-app-bar-title>
+      <v-app-bar-title>
+        <span style="font-family: 'New Tegomin', serif;">
+          サウナ道場
+        </span>
+      </v-app-bar-title>
     </v-app-bar>
     <v-main>
       <Nuxt />
@@ -12,6 +16,9 @@
       </v-tab-item>
       <v-tab-item>
         <Shisho />
+      </v-tab-item>
+      <v-tab-item>
+        <Minna />
       </v-tab-item>
     </v-tabs-items>
     </v-main>
@@ -33,6 +40,10 @@
           シショー
           <v-icon>mdi-heart</v-icon>
         </v-tab>
+        <v-tab>
+          みんな
+          <v-icon>mdi-account-supervisor</v-icon>
+        </v-tab>
       </v-tabs>
     </v-footer>
   </v-app>
@@ -45,18 +56,6 @@ export default {
       clipped: false,
       drawer: false,
       fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
