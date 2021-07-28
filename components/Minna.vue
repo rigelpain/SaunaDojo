@@ -1,14 +1,17 @@
 <template>
   <div>
-    <Card3 />
-    <Card3 />
-    <Card3 />
-    <Card3 />
+    <Card4 />
+    <Card5 />
+    <Card6 />
+    <Card7 />
   </div>
 </template>
 
 <script>
-import Card3 from '~/components/Card3.vue'
+import Card4 from './Card4.vue'
+import Card5 from './Card5.vue'
+import Card6 from './Card6.vue'
+import Card7 from './Card7.vue'
 
 export default {
   data () {
@@ -18,7 +21,10 @@ export default {
   computed: {
   },
   components: {
-    Card3,
+    Card4,
+    Card5,
+    Card6,
+    Card7,
   }
 }
 </script>
